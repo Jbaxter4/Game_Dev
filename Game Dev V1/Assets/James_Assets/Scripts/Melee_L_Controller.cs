@@ -165,7 +165,7 @@ public class Melee_L_Controller : BaseEnemyMovement
 
     void Attack()
     {
-        PStats.Health -= EStats.MeleeDamage;
+        //PStats.Health -= EStats.Damage;
         Debug.Log("Large Melee Enemy Dealt " + EStats.MeleeDamage + " Damage");
         Debug.Log("Player Health is " + PStats.Health);
     }
@@ -183,7 +183,7 @@ public class Melee_L_Controller : BaseEnemyMovement
     {
         Ground.Play();
         PStats.Health -= EStats.GroundPoundDamage;
-        target.GetComponent<Rigidbody>().AddForce(transform.forward * 1000f);
+        target.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
         Debug.Log("Large Melee Enemy used Ground Pound and Dealt " + EStats.GroundPoundDamage + " Damage");
         Debug.Log("Player Health is " + PStats.Health);
     }

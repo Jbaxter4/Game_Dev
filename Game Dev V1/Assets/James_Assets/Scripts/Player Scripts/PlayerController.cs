@@ -15,5 +15,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.deltaTime);
+        if (PStats.Health <= 0)
+        {
+            SceneManager.LoadScene("Scene_2");
+        }
     }
 }

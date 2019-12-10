@@ -93,7 +93,7 @@ public class Range_M_Controller : BaseEnemyMovement
                     recentSighting = true;
                     playerLastSighting = target.transform.position;
                 }
-                else if (hit.collider.CompareTag("Bullet") || hit.collider.CompareTag("Range_M")) { }
+                else if (hit.collider.CompareTag("Bullet")) { }
                 else
                 {
                     inSight = false;

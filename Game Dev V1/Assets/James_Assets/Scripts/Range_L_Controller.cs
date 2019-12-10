@@ -73,7 +73,7 @@ public class Range_L_Controller : BaseEnemyMovement
             {
                 agent.SetDestination(playerLastSighting);
             }
-            if (distanceToTargetLastPos < 3)
+            if (distanceToTargetLastPos < 2)
             {
                 recentSighting = false;
             }
@@ -82,6 +82,7 @@ public class Range_L_Controller : BaseEnemyMovement
         //Check if the enemy can currently hear or see the player
         if ((distanceToTarget <= 5) || ((distanceToTarget <= EStats.SightSize) && (angleToTarget <= EStats.SightRadius)))
         {
+
             RaycastHit hit = new RaycastHit();
             bool detectionRay = Physics.Raycast(transform.position, target.position - transform.position, out hit);
             if (detectionRay)
@@ -92,7 +93,7 @@ public class Range_L_Controller : BaseEnemyMovement
                     recentSighting = true;
                     playerLastSighting = target.transform.position;
                 }
-                else if (hit.collider.CompareTag("Bullet") || hit.collider.CompareTag("Range_L")) { }
+                else if (hit.collider.CompareTag("Bullet")) { }
                 else
                 {
                     inSight = false;

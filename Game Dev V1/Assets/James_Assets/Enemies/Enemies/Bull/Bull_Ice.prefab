@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6570797391956027589}
   - component: {fileID: 297460311580113210}
   - component: {fileID: 7239087639376273581}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Bull_Ice
   m_TagString: Untagged
   m_Icon: {fileID: 0}

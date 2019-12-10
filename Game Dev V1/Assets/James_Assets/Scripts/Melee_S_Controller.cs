@@ -45,7 +45,6 @@ public class Melee_S_Controller : BaseEnemyMovement
             {
                 if (hit.collider.CompareTag("Player"))
                 {
-                    SnapToTarget();
                     inSight = true;
                     recentSighting = true;
                     playerLastSighting = target.transform.position;

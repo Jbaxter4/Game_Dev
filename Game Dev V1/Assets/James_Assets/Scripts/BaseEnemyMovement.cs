@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class BaseEnemyMovement : MonoBehaviour
 {
+
     public float sightRadius;
     public float sightSize;
     public NavMeshAgent agent;
@@ -60,5 +61,10 @@ public class BaseEnemyMovement : MonoBehaviour
             isRotatingLeft = false;
         }
         isWandering = false;
+    }
+
+    public IEnumerator Stunned()
+    {
+        yield return new WaitForSeconds(5);
     }
 }

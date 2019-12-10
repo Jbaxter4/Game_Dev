@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1535521434672637004}
   - component: {fileID: 5359186121524868531}
   - component: {fileID: 3028963405907274788}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Bull_Vanilla
   m_TagString: Untagged
   m_Icon: {fileID: 0}

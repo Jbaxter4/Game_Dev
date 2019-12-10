@@ -69,46 +69,46 @@
     <Compile Include="Assets\James_Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs" />
     <Compile Include="Assets\James_Assets\NavMesh-Tutorial-master\NavMesh Example Project\Assets\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs" />
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -309,22 +309,22 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>F:/Users/Baxte/Game Dev V1/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>F:/Users/Baxte/Documents/Git/Game_Dev/Game Dev V1/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5917191104302991634}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Bullet_Spawn_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5779320736957679945}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Bullet_Spawn_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4785623075075721800}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Bullet_Spawn_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1335294930169705133}
   - component: {fileID: 2342836533730746627}
   - component: {fileID: 4710788165495328532}
-  m_Layer: 13
+  m_Layer: 8
   m_Name: Wizard_Ice
   m_TagString: Range_L
   m_Icon: {fileID: 0}

@@ -47,7 +47,6 @@ public class Boss_Controller : BaseEnemyMovement
     {
         Ground.Stop();
         int MeleeAttack = Random.Range(1, 10);
-        int RangeAttack = Random.Range(1, 6);
         distanceToTarget = Vector3.Distance(target.position, transform.position);
         angleToTarget = Vector3.Angle(transform.forward, target.transform.position - transform.position);
         distanceToTargetLastPos = Vector3.Distance(playerLastSighting, transform.position);
@@ -176,6 +175,7 @@ public class Boss_Controller : BaseEnemyMovement
             }
         }
 
+        //Destroy enemy if health falls to zero
         if (EStats.CurrentHealth <= 0)
         {
             Destroy(this.gameObject);
@@ -200,13 +200,13 @@ public class Boss_Controller : BaseEnemyMovement
 
     void AttackRange()
     {
-        GameObject bulletClone = Instantiate(Bullet, transform.GetChild(2).position, Quaternion.identity) as GameObject;
+        GameObject bulletClone = Instantiate(Bullet, transform.GetChild(1).position, Quaternion.identity) as GameObject;
         Rigidbody bulletCloneRB = bulletClone.GetComponent<Rigidbody>();
         bulletCloneRB.AddForce(transform.forward * 1000);
-        GameObject bulletCloneL = Instantiate(Bullet, transform.GetChild(3).position, Quaternion.identity) as GameObject;
+        GameObject bulletCloneL = Instantiate(Bullet, transform.GetChild(2).position, Quaternion.identity) as GameObject;
         Rigidbody bulletCloneRBL = bulletCloneL.GetComponent<Rigidbody>();
         bulletCloneRBL.AddForce((transform.forward * 1000) - (transform.right * 100));
-        GameObject bulletCloneR = Instantiate(Bullet, transform.GetChild(4).position, Quaternion.identity) as GameObject;
+        GameObject bulletCloneR = Instantiate(Bullet, transform.GetChild(3).position, Quaternion.identity) as GameObject;
         Rigidbody bulletCloneRBR = bulletCloneR.GetComponent<Rigidbody>();
         bulletCloneRBR.AddForce((transform.forward * 1000) + (transform.right * 100));
     }
