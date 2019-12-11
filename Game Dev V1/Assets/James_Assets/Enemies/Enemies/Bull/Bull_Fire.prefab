@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2308626640877201049}
   - component: {fileID: 9158351639766464358}
   - component: {fileID: 2256212163982438129}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Bull_Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -80,6 +80,13 @@
     <Compile Include="Assets\James_Assets\Scripts\Melee_L_Controller.cs" />
     <Compile Include="Assets\James_Assets\Scripts\Melee_M_Controller.cs" />
     <Compile Include="Assets\James_Assets\Scripts\Melee_S_Controller.cs" />
+    <Compile Include="Assets\James_Assets\Scripts\New Folder\Boss_Stats.cs" />
+    <Compile Include="Assets\James_Assets\Scripts\New Folder\Melee_L_Stats.cs" />
+    <Compile Include="Assets\James_Assets\Scripts\New Folder\Melee_M_Stats.cs" />
+    <Compile Include="Assets\James_Assets\Scripts\New Folder\Melee_S_Stats.cs" />
+    <Compile Include="Assets\James_Assets\Scripts\New Folder\Range_L_Stats.cs" />
+    <Compile Include="Assets\James_Assets\Scripts\New Folder\Range_M_Stats.cs" />
+    <Compile Include="Assets\James_Assets\Scripts\New Folder\Range_S_Stats.cs" />
     <Compile Include="Assets\James_Assets\Scripts\Player Scripts\PlayerController.cs" />
     <Compile Include="Assets\James_Assets\Scripts\Player Scripts\PlayerStats.cs" />
     <Compile Include="Assets\James_Assets\Scripts\Range_L_Controller.cs" />

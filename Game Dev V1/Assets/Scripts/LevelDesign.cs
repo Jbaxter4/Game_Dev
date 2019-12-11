@@ -78,7 +78,7 @@ public class LevelDesign : MonoBehaviour
         {
             spawnObjectCollider(levelSize, lavaSpurt, false, levelSize * 8, 0);
         }
-        surface.BuildNavMesh();
+    
         for(int x = 0; x< enemyNumber; x++)
         {
             spawnEnemys();

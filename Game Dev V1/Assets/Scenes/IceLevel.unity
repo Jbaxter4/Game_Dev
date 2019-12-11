@@ -306,7 +306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582679061}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 12.3, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1831379889}
@@ -499,7 +499,7 @@ PrefabInstance:
     - target: {fileID: 415361648798861825, guid: db42ea00295c34a4f9501c8ba0cab73b,
         type: 3}
       propertyPath: enemies.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 415361648798861825, guid: db42ea00295c34a4f9501c8ba0cab73b,
         type: 3}
@@ -715,6 +715,12 @@ PrefabInstance:
       propertyPath: enemies.Array.data[4]
       value: 
       objectReference: {fileID: 4352471343999367322, guid: ac1d32f64c0d00b47a4e103ebecd6723,
+        type: 3}
+    - target: {fileID: 415361648798861825, guid: db42ea00295c34a4f9501c8ba0cab73b,
+        type: 3}
+      propertyPath: enemies.Array.data[5]
+      value: 
+      objectReference: {fileID: 1525925197240957384, guid: d82ba2a842e34f54aa00ef57cf5164e8,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db42ea00295c34a4f9501c8ba0cab73b, type: 3}

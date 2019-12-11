@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4464920717824323600}
   - component: {fileID: 747915502869578465}
   - component: {fileID: 4535960828266288978}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Agent_Vanilla
   m_TagString: Range_M
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 800952726348068968}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Bullet_Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

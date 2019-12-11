@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7964746517483948062}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Bullet_Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5748354400585834002}
   - component: {fileID: 6628150046896709581}
   - component: {fileID: 7265800335166194914}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Worm_Ice
   m_TagString: Range_S
   m_Icon: {fileID: 0}

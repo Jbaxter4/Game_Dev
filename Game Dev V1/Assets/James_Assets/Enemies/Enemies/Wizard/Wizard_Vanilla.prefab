@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4613705235667493057}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Bullet_Spawn_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4768604013433168026}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Bullet_Spawn_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5796356290863948699}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Bullet_Spawn_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 44704119208008574}
   - component: {fileID: 3646320207100823760}
   - component: {fileID: 297385407151357425}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Wizard_Vanilla
   m_TagString: Range_L
   m_Icon: {fileID: 0}
