@@ -435,6 +435,7 @@ MonoBehaviour:
   currentObjectCount: 0
   failedAtempt: 0
   surface: {fileID: 1097925846}
+  enemySpawnBox: {x: 50, y: 0, z: 50}
 --- !u!1 &1097925845
 GameObject:
   m_ObjectHideFlags: 0

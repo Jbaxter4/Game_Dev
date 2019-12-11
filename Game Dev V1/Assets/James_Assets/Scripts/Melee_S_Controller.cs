@@ -23,10 +23,10 @@ public class Melee_S_Controller : BaseEnemyMovement
         EStats.MeleeAttackCooldown = 0f;
         EStats.SightRadius = 60f;
         EStats.SightSize = 30f;
-        target = GameObject.Find("Player").transform;
+        target = CharacterCombat.instance.transform;
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = 2;
-        Player = GameObject.Find("Player");
+        Player = CharacterCombat.instance.gameObject;
         PStats = Player.GetComponent<PlayerStats>();
     }
 

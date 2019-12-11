@@ -8,6 +8,7 @@ public class Range_M_Controller : BaseEnemyMovement
     GameObject Player;
     PlayerStats PStats;
     Enemy_Stats EStats;
+    [SerializeField]
     private bool inSight;
     private Vector3 playerLastSighting;
     private bool recentSighting;
@@ -25,7 +26,7 @@ public class Range_M_Controller : BaseEnemyMovement
         EStats.SightRadius = 60f;
         EStats.SightSize = 60f;
         EStats.Range = 50f;
-        Player = GameObject.FindGameObjectWithTag("Player");
+        Player = CharacterCombat.instance.gameObject;
         target = Player.transform;
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = 2;
@@ -58,11 +59,10 @@ public class Range_M_Controller : BaseEnemyMovement
             if (isWalking == true)
             {
                 Vector3 moveTo = transform.position += transform.forward * MovementSpeed * Time.deltaTime;
-                NavMeshPath path = new NavMeshPath();
-                if (agent.CalculatePath(moveTo, path))
-                {
-                    agent.SetDestination(moveTo);
-                }
+               
+                
+                agent.SetDestination(moveTo);
+                
             }
         }
         //If enemy has seen player but lost sight of them, go to last know position of player
@@ -84,7 +84,7 @@ public class Range_M_Controller : BaseEnemyMovement
         {
 
             RaycastHit hit = new RaycastHit();
-            bool detectionRay = Physics.Raycast(transform.position, target.position - transform.position, out hit);
+            bool detectionRay = Physics.Raycast(transform.position + transform.forward, target.position - transform.position, out hit);
             if (detectionRay)
             {
                 if (hit.collider.CompareTag("Player"))
@@ -92,6 +92,8 @@ public class Range_M_Controller : BaseEnemyMovement
                     inSight = true;
                     recentSighting = true;
                     playerLastSighting = target.transform.position;
+                    isWandering = false;
+                    StopCoroutine(Wander());
                 }
                 else if (hit.collider.CompareTag("Bullet")) { }
                 else
@@ -112,7 +114,7 @@ public class Range_M_Controller : BaseEnemyMovement
         }
 
         //If enemy is aware of player it will face the player. If within range it attacks, if not it will move towards player
-        if (inSight && (PStats.Health > 0))
+        if (inSight && !CharacterCombat.instance.isDead())
         {
             FaceTarget();
             if (distanceToTarget <= EStats.Range)
@@ -134,11 +136,7 @@ public class Range_M_Controller : BaseEnemyMovement
             }
         }
         
-        //Destroy enemy if health falls to zero
-        if (EStats.CurrentHealth <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+       
     }
 
     void Attack()
@@ -146,6 +144,7 @@ public class Range_M_Controller : BaseEnemyMovement
         agent.ResetPath();
         GameObject bulletClone = Instantiate(Bullet, transform.GetChild(0).position, Quaternion.identity) as GameObject;
         Rigidbody bulletCloneRB = bulletClone.GetComponent<Rigidbody>();
+        bulletClone.GetComponentInChildren<Bullet_M>().Init(EStats);
         bulletCloneRB.AddForce(transform.forward * 2000);
     }
 }

@@ -25,8 +25,8 @@ public class Range_L_Controller : BaseEnemyMovement
         EStats.SightRadius = 60f;
         EStats.SightSize = 45f;
         EStats.Range = 25f;
-        Player = GameObject.FindGameObjectWithTag("Player");
-        target = Player.transform;
+        Player = CharacterCombat.instance.gameObject;
+        target = CharacterCombat.instance.transform;
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = 2;
         PStats = Player.GetComponent<PlayerStats>();

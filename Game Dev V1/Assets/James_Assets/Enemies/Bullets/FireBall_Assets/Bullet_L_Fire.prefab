@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8148091782574086778}
   - component: {fileID: 6953015311257368522}
   - component: {fileID: 446361623344673311}
-  - component: {fileID: 4781118129841622780}
+  - component: {fileID: -8431941482982385618}
   m_Layer: 0
   m_Name: Bullet_L_Fire
   m_TagString: Bullet
@@ -110,7 +110,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &4781118129841622780
+--- !u!114 &-8431941482982385618
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,6 +119,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3444480382569800784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8419e1bca7f542c45bfd915b47a1d064, type: 3}
+  m_Script: {fileID: 11500000, guid: e99e7b041c2b4d2479cbe9d390f1f9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

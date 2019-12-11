@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4635588573879369739}
   - component: {fileID: 5852761861374864827}
   - component: {fileID: 3996653268774709358}
-  - component: {fileID: 8295292871624938637}
+  - component: {fileID: 1331919086390109215}
   m_Layer: 0
   m_Name: Bullet_L_Ice
   m_TagString: Bullet
@@ -110,7 +110,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &8295292871624938637
+--- !u!114 &1331919086390109215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,6 +119,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2200709741329841697}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8419e1bca7f542c45bfd915b47a1d064, type: 3}
+  m_Script: {fileID: 11500000, guid: e99e7b041c2b4d2479cbe9d390f1f9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

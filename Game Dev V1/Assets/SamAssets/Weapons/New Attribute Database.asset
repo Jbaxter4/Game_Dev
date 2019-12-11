@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2e896e5303d08488931658596cd64f, type: 3}
+  m_Name: New Attribute Database
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  weaponAttributes:
+  - title: Damage
+    attributeType: 1
+    specifyWeaponType: 
+    dataSets:
+    - valueThreshHold: 3.4028235e+38
+      commonNegativeRange: {x: -40, y: -20}
+      uncommonNegativeRange: {x: -20, y: -5}
+      uncommonPositiveRange: {x: 5, y: 10}
+      rarePositiveRange: {x: 10, y: 28}
+      epicPositiveRange: {x: 18, y: 29}
+      legendaryPositiveRange: {x: 29, y: 46}
+    chosenValue: 1.2632128
+  - title: Ammo
+    attributeType: 2
+    specifyWeaponType: 
+    dataSets:
+    - valueThreshHold: 3.4028235e+38
+      commonNegativeRange: {x: -35, y: -25}
+      uncommonNegativeRange: {x: -25, y: -10}
+      uncommonPositiveRange: {x: 5, y: 10}
+      rarePositiveRange: {x: 10, y: 14}
+      epicPositiveRange: {x: 14, y: 22}
+      legendaryPositiveRange: {x: 22, y: 34}
+    chosenValue: 1.1977198
+  - title: Fire Rate
+    attributeType: 3
+    specifyWeaponType: 
+    dataSets:
+    - valueThreshHold: 0.1
+      commonNegativeRange: {x: -150, y: -75}
+      uncommonNegativeRange: {x: -75, y: -5}
+      uncommonPositiveRange: {x: 5, y: 10}
+      rarePositiveRange: {x: 10, y: 15}
+      epicPositiveRange: {x: 15, y: 20}
+      legendaryPositiveRange: {x: 20, y: 27}
+    - valueThreshHold: 3.4028235e+38
+      commonNegativeRange: {x: -30, y: -15}
+      uncommonNegativeRange: {x: -15, y: -5}
+      uncommonPositiveRange: {x: 5, y: 10}
+      rarePositiveRange: {x: 10, y: 15}
+      epicPositiveRange: {x: 15, y: 22}
+      legendaryPositiveRange: {x: 22, y: 36}
+    chosenValue: 1.1806132
+  - title: Reload Speed
+    attributeType: 4
+    specifyWeaponType: 
+    dataSets:
+    - valueThreshHold: 3.4028235e+38
+      commonNegativeRange: {x: -40, y: -25}
+      uncommonNegativeRange: {x: -25, y: -10}
+      uncommonPositiveRange: {x: 5, y: 10}
+      rarePositiveRange: {x: 10, y: 14}
+      epicPositiveRange: {x: 14, y: 20}
+      legendaryPositiveRange: {x: 20, y: 28}
+    chosenValue: 1.1771637
+  - title: Range
+    attributeType: 6
+    specifyWeaponType: 
+    dataSets:
+    - valueThreshHold: 3.4028235e+38
+      commonNegativeRange: {x: -50, y: -30}
+      uncommonNegativeRange: {x: -30, y: -10}
+      uncommonPositiveRange: {x: 51, y: 12}
+      rarePositiveRange: {x: 12, y: 22}
+      epicPositiveRange: {x: 22, y: 36}
+      legendaryPositiveRange: {x: 36, y: 56}
+    chosenValue: 1.3066965
+  - title: Spread
+    attributeType: 5
+    specifyWeaponType: 000000000100000002000000
+    dataSets:
+    - valueThreshHold: 0.25
+      commonNegativeRange: {x: -250, y: -150}
+      uncommonNegativeRange: {x: -150, y: -30}
+      uncommonPositiveRange: {x: 10, y: 14}
+      rarePositiveRange: {x: 12, y: 17}
+      epicPositiveRange: {x: 15, y: 20}
+      legendaryPositiveRange: {x: 19, y: 25}
+    - valueThreshHold: 3.4028235e+38
+      commonNegativeRange: {x: -40, y: -20}
+      uncommonNegativeRange: {x: -20, y: -5}
+      uncommonPositiveRange: {x: 10, y: 15}
+      rarePositiveRange: {x: 15, y: 25}
+      epicPositiveRange: {x: 25, y: 35}
+      legendaryPositiveRange: {x: 32, y: 50}
+    chosenValue: 1.1735175
+  specialWeaponAttributes:
+  - prefabOverride: {fileID: 7480714385496368099, guid: 757527c75fa174147b1bca3dc85d5174,
+      type: 3}
+    specialAttributeType: 1
+    includedWeaponTypes: 0200000000000000

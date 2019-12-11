@@ -184,7 +184,8 @@ public class Boss_Controller : BaseEnemyMovement
 
     void AttackMelee()
     {
-        PStats.Health -= EStats.MeleeDamage;
+        //PStats.Health -= EStats.MeleeDamage;
+        CharacterCombat.instance.OnDamage((int)EStats.MeleeDamage);
         Debug.Log("Boss Dealt " + EStats.MeleeDamage + " Damage");
         Debug.Log("Player Health is " + PStats.Health);
     }
@@ -192,8 +193,9 @@ public class Boss_Controller : BaseEnemyMovement
     void GroundPound()
     {
         Ground.Play();
-        PStats.Health -= EStats.GroundPoundDamage;
-        target.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
+        //PStats.Health -= EStats.GroundPoundDamage;
+        CharacterCombat.instance.OnDamage((int)EStats.GroundPoundDamage);
+        //target.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
         Debug.Log("Boss used Ground Pound and Dealt " + EStats.GroundPoundDamage + " Damage");
         Debug.Log("Player Health is " + PStats.Health);
     }

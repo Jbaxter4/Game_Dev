@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df70b0974bac6a64f82255f4972b1ed9, type: 3}
+  m_Name: Hook
+  m_EditorClassIdentifier: 
+  abilityName: Hook
+  damage: 10
+  cooldown: 5
+  range: 10
+  attachedPrefab: {fileID: 2224913478317715657, guid: 01e94d43ebc4db644bd7310a50b57a6c,
+    type: 3}
+  telegraphType: 2
+  abilityIcon: {fileID: 21300000, guid: 1cecd64433578c04e8f89ed442c7b8ca, type: 3}

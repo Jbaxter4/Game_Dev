@@ -33,7 +33,7 @@ public class Melee_M_Controller : BaseEnemyMovement
         EStats.ChargeAttackSpeed = 10f;
         EStats.ChargeSpeed = 100f;
         EStats.ChargeCooldown = 0f;
-        target = GameObject.Find("Player").transform;
+        target = CharacterCombat.instance.transform;
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = 2;
         Player = GameObject.Find("Player");

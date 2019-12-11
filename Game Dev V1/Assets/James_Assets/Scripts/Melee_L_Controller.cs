@@ -21,14 +21,14 @@ public class Melee_L_Controller : BaseEnemyMovement
         EStats.CurrentHealth = EStats.MaxHealth;
         EStats.MeleeDamage = 20f;
         EStats.MeleeAttackSpeed = 1f;
-        EStats.MeleeAttackCooldown = 0f;
+        EStats.MeleeAttackCooldown = 0.5f;
         EStats.GroundPoundDamage = 15f;
         EStats.GroundPoundSpeed = 10f;
-        EStats.GroundPoundCooldown = 0f;
+        EStats.GroundPoundCooldown = 2f;
         EStats.SightRadius = 60f;
         EStats.SightSize = 30f;
         EStats.DamageResistant = false;
-        target = GameObject.Find("Player").transform;
+        target = CharacterCombat.instance.transform;
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = 2;
         Player = GameObject.Find("Player");
@@ -166,6 +166,7 @@ public class Melee_L_Controller : BaseEnemyMovement
     void Attack()
     {
         //PStats.Health -= EStats.Damage;
+        CharacterCombat.instance.OnDamage((int)EStats.MeleeDamage);
         Debug.Log("Large Melee Enemy Dealt " + EStats.MeleeDamage + " Damage");
         Debug.Log("Player Health is " + PStats.Health);
     }
@@ -182,8 +183,9 @@ public class Melee_L_Controller : BaseEnemyMovement
     void GroundPound()
     {
         Ground.Play();
-        PStats.Health -= EStats.GroundPoundDamage;
-        target.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
+        //PStats.Health -= EStats.GroundPoundDamage;
+        CharacterCombat.instance.OnDamage((int)EStats.GroundPoundDamage);
+        //target.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
         Debug.Log("Large Melee Enemy used Ground Pound and Dealt " + EStats.GroundPoundDamage + " Damage");
         Debug.Log("Player Health is " + PStats.Health);
     }

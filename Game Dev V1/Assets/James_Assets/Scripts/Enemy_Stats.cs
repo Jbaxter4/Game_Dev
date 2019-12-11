@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class Enemy_Stats : MonoBehaviour
+public class Enemy_Stats : MonoBehaviour, IDamagable
 {
     public float CurrentHealth;
     public float MaxHealth;
@@ -29,4 +30,31 @@ public class Enemy_Stats : MonoBehaviour
     public float EarthShatterDamage;
     public float EarthShatterSpeed;
     public float EarthShatterCooldown;
+
+    UnityEvent onDeath;
+
+    public void OnDeath()
+    {
+        onDeath?.Invoke();
+        LevelDesign.instance.numberOfEnemies--;
+        Destroy(gameObject);
+    }
+    public void OnDamage(int damage)
+    {
+        CurrentHealth -= damage;
+        if(CurrentHealth <= 0)
+        {
+            OnDeath();
+        }
+    }
+
+    public void OnHeal(int healAmount)
+    {
+        CurrentHealth += healAmount;
+    }
+
+    public bool isDead()
+    {
+        return CurrentHealth <= 0;
+    }
 }

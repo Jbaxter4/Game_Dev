@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4464920717824323600}
   - component: {fileID: 747915502869578465}
   - component: {fileID: 4535960828266288978}
+  - component: {fileID: 5274445559253230006}
   m_Layer: 13
   m_Name: Agent_Vanilla
   m_TagString: Range_M
@@ -38,7 +39,7 @@ Transform:
   - {fileID: 800952726348068968}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 110.31, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4360695042718256024
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8469494145858465668, guid: 4671627ec46499a4d927038b8f7c4fdf, type: 3}
+  - {fileID: 2100000, guid: 05648bb0f7e2cbd408b4b3bc68a16a33, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -223,6 +224,19 @@ MonoBehaviour:
   EarthShatterDamage: 0
   EarthShatterSpeed: 0
   EarthShatterCooldown: 0
+--- !u!114 &5274445559253230006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4360695042718256004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0902df65ca0ca8c4db9edf083cc099c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamType: 1
 --- !u!1 &9066551889577757204
 GameObject:
   m_ObjectHideFlags: 0

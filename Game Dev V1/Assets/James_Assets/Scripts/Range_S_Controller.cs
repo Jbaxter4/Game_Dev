@@ -28,7 +28,7 @@ public class Range_S_Controller : BaseEnemyMovement
         EStats.Range = 20f;
         EStats.HealthRegenCooldown = 0f;
         EStats.HealthRegenRate = 2f;
-        Player = GameObject.FindGameObjectWithTag("Player");
+        Player = CharacterCombat.instance.gameObject;
         target = Player.transform;
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = 2;

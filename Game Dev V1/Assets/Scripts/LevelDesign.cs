@@ -16,7 +16,17 @@ public class LevelDesign : MonoBehaviour
     List<Room> Rooms = new List<Room>();
     int[,] map;
     public NavMeshSurface surface;
-    int numberOfEnemies;
+    public int numberOfEnemies;
+    [SerializeField]
+    Vector3 enemySpawnBox;
+    [SerializeField]
+    GameObject player;
+    public static LevelDesign instance;
+
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+    }
 
     class Room
     {
@@ -83,6 +93,7 @@ public class LevelDesign : MonoBehaviour
         {
             spawnEnemys();
         }
+        surface.BuildNavMesh();
     }
 
     void spawnEnemys()
@@ -91,10 +102,10 @@ public class LevelDesign : MonoBehaviour
         
         for (int y = 0; y < 100; y++)
         {
-            Ray ray = new Ray(transform.position + new Vector3(Random.Range(-levelSize * 5 + 4, levelSize * 5 - 4), 3, Random.Range(-levelSize * 5 + 4, levelSize * 5 - 4)), Vector3.down);
+            Ray ray = new Ray(transform.position + new Vector3(Random.Range(-levelSize * 5 + 4, levelSize * 5 - 4), 20, Random.Range(-levelSize * 5 + 4, levelSize * 5 - 4)), Vector3.down);
             RaycastHit hit = new RaycastHit();
             LayerMask layerMask = 1 << 8;
-            if (Physics.Raycast(ray, out hit, 100));
+            if (Physics.Raycast(ray, out hit, 100))
             {
                 if (hit.collider.gameObject.layer != 8)
                 {
@@ -106,7 +117,11 @@ public class LevelDesign : MonoBehaviour
         }
 
     }
-
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(transform.position, enemySpawnBox);
+    }
     void spawnBoundaryAndFloor(int levelSize)
     {
         //Boundary Walls
