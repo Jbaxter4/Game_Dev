@@ -18,8 +18,10 @@ public class HealingRiftPrefab : AbilityPrefab
         RaycastHit hit = new RaycastHit();
         if(Physics.Raycast(ray, out hit, 50f, hitMask))
         {
-            AoeEffect area = Instantiate(healingArea, hit.point, Quaternion.Euler(90,0,0));
+            Debug.Log("HIT");
+            AoeEffect area = Instantiate(healingArea, hit.point, healingArea.transform.rotation);
             area.SetTeam(CharacterCombat.instance.TeamManager.GetTeam());
+            area.SetValuePerTick(abilityInfo.damage);
         }
     }
 

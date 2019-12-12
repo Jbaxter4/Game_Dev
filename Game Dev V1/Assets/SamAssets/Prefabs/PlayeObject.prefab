@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1959076910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1959076911}
+  - component: {fileID: 1959076912}
+  m_Layer: 0
+  m_Name: FireballPrefab(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1959076911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959076910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 231926387104593601}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1959076912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959076910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f5da7d6bd39dd40b4c8c0d9df1d8f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityInfo: {fileID: 11400000, guid: e3a11f34ae74347418c90321e568c73d, type: 2}
+  vel: 20
+  fireballPrefab: {fileID: 6747247066501980939, guid: 25e116847573cda4da817b6ccf77745f,
+    type: 3}
 --- !u!1 &231926385010023945
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,9 +556,9 @@ MonoBehaviour:
   slottedAbilities:
   - {fileID: 231926385903525240}
   - {fileID: 231926385908267927}
-  - {fileID: 231926387030445786}
+  - {fileID: 1418759237200210665}
   - {fileID: 231926385756728054}
-  - {fileID: 0}
+  - {fileID: 1959076912}
   actionBar: {fileID: 0}
   keyBindings: 3100000032000000330000003400000035000000
 --- !u!1 &231926386372949144
@@ -630,7 +677,7 @@ Transform:
   m_GameObject: {fileID: 231926386531140254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.26399374, y: 1.0815549, z: -0.6963639}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 231926385811744786}
   - {fileID: 231926385010023946}
@@ -702,6 +749,7 @@ MonoBehaviour:
   - {fileID: 0}
   unlockedWeaponSlots: 010100
   equipedWeapon: {fileID: 11400000, guid: 603bca405d517a14daa0f6d19add1e9e, type: 2}
+  classManager: {fileID: 0}
   weaponSlot: {fileID: 231926386482429378}
 --- !u!114 &231926386531140251
 MonoBehaviour:
@@ -938,59 +986,10 @@ Transform:
   m_LocalPosition: {x: 0.26399374, y: -1.0815549, z: 0.6963639}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 231926387030445785}
+  - {fileID: 6420054973461657670}
   m_Father: {fileID: 231926386344128771}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &231926387030445784
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 231926387030445785}
-  - component: {fileID: 231926387030445786}
-  m_Layer: 23
-  m_Name: HealingRiftPrefab(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &231926387030445785
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231926387030445784}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 231926386976285798}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &231926387030445786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 231926387030445784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8441daee368fdf745b7bf1fdff404161, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityInfo: {fileID: 11400000, guid: e43c167161e01cb4c80d6ccaaa6f8950, type: 2}
-  healingArea: {fileID: 7257030935972205150, guid: ba8f2612408cf04479848800ecf1f6d1,
-    type: 3}
-  hitMask:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!1 &231926387050219745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1048,10 +1047,60 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.26399374, y: -1.0815549, z: 0.6963639}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1959076911}
   m_Father: {fileID: 231926386344128771}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7248134491077936472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6420054973461657670}
+  - component: {fileID: 1418759237200210665}
+  m_Layer: 0
+  m_Name: HealingRiftPrefab(Clone)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6420054973461657670
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248134491077936472}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 231926386976285798}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1418759237200210665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248134491077936472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8441daee368fdf745b7bf1fdff404161, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityInfo: {fileID: 11400000, guid: e43c167161e01cb4c80d6ccaaa6f8950, type: 2}
+  healingArea: {fileID: 7257030935972205150, guid: ba8f2612408cf04479848800ecf1f6d1,
+    type: 3}
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 4608
 --- !u!1001 &582511504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1121,6 +1170,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e356f68420857dd4884924a0bed50b29, type: 3}
+--- !u!4 &6606802603461870310 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6606802602963298678, guid: e356f68420857dd4884924a0bed50b29,
+    type: 3}
+  m_PrefabInstance: {fileID: 582511504}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6606802603461870297 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6606802602963298633, guid: e356f68420857dd4884924a0bed50b29,
@@ -1133,12 +1188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &6606802603461870310 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6606802602963298678, guid: e356f68420857dd4884924a0bed50b29,
-    type: 3}
-  m_PrefabInstance: {fileID: 582511504}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &231926385426728063
 PrefabInstance:
   m_ObjectHideFlags: 0

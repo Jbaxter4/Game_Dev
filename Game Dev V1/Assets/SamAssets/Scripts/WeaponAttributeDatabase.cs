@@ -32,7 +32,7 @@ public class WeaponAttributeDatabase : SerializedScriptableObject
         WeaponAttribute[] temp = new WeaponAttribute[GetAttributeAmount(weapon.rarity)];
         for (int i = 0; i < temp.Length; i++)
         {
-            Debug.Log("Finding");
+
             bool found = false;
             while (!found)
             {

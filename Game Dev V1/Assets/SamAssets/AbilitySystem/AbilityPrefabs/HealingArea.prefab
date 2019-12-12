@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectType: 1
-  tickTime: 0.5
+  tickTime: 1
   valuePerTick: 0
   radius: 4
   spawnedByTeam: 0

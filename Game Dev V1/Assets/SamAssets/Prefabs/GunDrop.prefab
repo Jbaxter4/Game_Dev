@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3865442916203910527}
   - component: {fileID: 3865442916203910525}
   - component: {fileID: 3865442916203910524}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: GunDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,6 +87,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8388608
 --- !u!135 &3865442916203910524
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -111,7 +114,7 @@ GameObject:
   - component: {fileID: 3865442916350494348}
   - component: {fileID: 3865442916350494349}
   - component: {fileID: 3865442916350494450}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: Visual Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3865442916478149223}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: ItemParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}

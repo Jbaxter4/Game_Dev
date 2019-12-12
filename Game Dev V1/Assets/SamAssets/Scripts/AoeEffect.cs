@@ -51,6 +51,7 @@ public class AoeEffect : MonoBehaviour
             {
                 if(team.GetTeam() == spawnedByTeam)
                 {
+                    Debug.Log("HEALED " + col.gameObject.name);
                     team.Damagable.OnHeal((int)valuePerTick);
                 }
             }

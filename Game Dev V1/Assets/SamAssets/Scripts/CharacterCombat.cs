@@ -32,11 +32,15 @@ public class CharacterCombat : MonoBehaviour, IDamagable
     public Weapon EquipedWeapon { get { return equipedWeapon; } }
     int burstCounter;
     float burstIntervalTimer;
- 
-
+    [SerializeField]
+    CharacterClassManager classManager;
+    
     [SerializeField]
     Transform weaponSlot;
     public Transform WeaponSlot { get { return weaponSlot; } }
+
+    
+    
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -175,7 +179,10 @@ public class CharacterCombat : MonoBehaviour, IDamagable
 
     public void OnHeal(int healAmount)
     {
+        if (currentHealth == classManager.GetCharacterClass().startingHealth) return;
         currentHealth += healAmount;
+        Mathf.Clamp(currentHealth, 0, classManager.GetCharacterClass().startingHealth);
+
     }
 
     public bool isDead()

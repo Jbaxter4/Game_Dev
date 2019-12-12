@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HealingRift
   m_EditorClassIdentifier: 
   abilityName: HealingRift
-  damage: 0
+  damage: 5
   cooldown: 10
   range: 0
   attachedPrefab: {fileID: 8279268937733425190, guid: 40262b9c147caab4e83df33444941352,

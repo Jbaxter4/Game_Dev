@@ -22,6 +22,8 @@ public class WeaponDrop : MonoBehaviour
     float bobSpeed, rotationSpeed, scaleSpeed;
     [SerializeField]
     AnimationCurve curve;
+    [SerializeField]
+    LayerMask playerLayer;
 
 
     private void Start()
@@ -67,14 +69,15 @@ public class WeaponDrop : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == 12)
+        if(other.gameObject.layer == 23)
         {
+            Debug.Log("SET");
             CharacterInventory.instance.SetHoveredWeapon(this);
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == 12)
+        if (other.gameObject.layer == 23)
         {
             CharacterInventory.instance.ClearHoveredWeapon(this);
         }
