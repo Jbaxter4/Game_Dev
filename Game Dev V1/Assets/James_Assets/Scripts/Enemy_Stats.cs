@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Enemy_Stats : MonoBehaviour, IDamagable
+public class Enemy_Stats : MonoBehaviour, IDamagable, IExplodable
 {
     public float CurrentHealth;
     public float MaxHealth;
@@ -56,5 +56,10 @@ public class Enemy_Stats : MonoBehaviour, IDamagable
     public bool isDead()
     {
         return CurrentHealth <= 0;
+    }
+
+    public void OnExpload(Vector3 explosionPoint, float radius, float damage)
+    {
+        CurrentHealth -= damage;
     }
 }

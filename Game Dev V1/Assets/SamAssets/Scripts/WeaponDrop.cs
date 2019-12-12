@@ -65,7 +65,12 @@ public class WeaponDrop : MonoBehaviour
     public void PickUpDropNoInventory(bool equip)
     {
         bool pickedUp = CharacterInventory.instance.PickupWeaponNoInventory(weapon, equip);
-        if(pickedUp)Destroy(gameObject);
+        if (pickedUp)
+        {
+            Destroy(gameObject);
+           
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

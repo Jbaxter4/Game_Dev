@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Melee_M_Controller : BaseEnemyMovement
 {
     GameObject Player;
-    PlayerStats PStats;
+    CharacterCombat PStats;
     Enemy_Stats EStats;
     private bool inSight;
     private Vector3 playerLastSighting;
@@ -35,9 +35,9 @@ public class Melee_M_Controller : BaseEnemyMovement
         EStats.ChargeCooldown = 0f;
         target = CharacterCombat.instance.transform;
         agent = GetComponent<NavMeshAgent>();
-        agent.stoppingDistance = 2;
+        agent.stoppingDistance = 3;
         Player = GameObject.Find("Player");
-        PStats = Player.GetComponent<PlayerStats>();
+        PStats = CharacterCombat.instance;
     }
 
     void Update()
@@ -111,7 +111,7 @@ public class Melee_M_Controller : BaseEnemyMovement
         }
 
         //If enemy is aware of player it will either charge the player if the player is far away or move towards the player
-        if ((inSight == true) && (PStats.Health > 0))
+        if ((inSight == true) && (!PStats.isDead()))
         {
             if ((distanceToTarget > 15) && (EStats.ChargeCooldown <= 0) && !charging)
             {
@@ -171,18 +171,13 @@ public class Melee_M_Controller : BaseEnemyMovement
             }
         }
 
-        //Destroy enemy if health falls to zero
-        if (EStats.CurrentHealth <= 0)
-        {
-            Destroy(this.gameObject);
-        }
+        
     }
 
     void Attack()
     {
-        PStats.Health -= EStats.MeleeDamage;
-        Debug.Log("Medium Melee Enemy Dealt " + EStats.MeleeDamage + " Damage");
-        Debug.Log("Player Health is " + PStats.Health);
+        PStats.OnDamage((int)EStats.MeleeDamage);
+        
     }
 
     void Charge(Vector3 playerPosition)
@@ -198,11 +193,10 @@ public class Melee_M_Controller : BaseEnemyMovement
         {
             if (Other.collider.CompareTag("Player"))
             {
-                PStats.Health -= EStats.ChargeDamage;
-                Debug.Log("Medium Melee Enemy charged player and Dealt " + EStats.ChargeDamage + " Damage");
-                Debug.Log("Player Health is " + PStats.Health);
+                PStats.OnDamage((int) EStats.ChargeDamage);
+                
                 agent.velocity = Vector3.zero;
-                target.GetComponent<Rigidbody>().AddForce(agent.velocity * 50f);
+                //target.GetComponent<Rigidbody>().AddForce(agent.velocity * 50f);
                 charging = false;
             }            
         }

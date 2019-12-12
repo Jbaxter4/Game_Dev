@@ -179,6 +179,7 @@ public class CharacterInventory : SerializedMonoBehaviour
                     {
                         CharacterCombat.instance.SetWeaponInSlot(x, weapon);
                     }
+                    weaponText.gameObject.SetActive(false);
                     return true;
                 }
             }
@@ -191,6 +192,7 @@ public class CharacterInventory : SerializedMonoBehaviour
                 {
 
                     CharacterCombat.instance.SetWeaponInSlotAndEquip(weapon, x);
+                    weaponText.gameObject.SetActive(false);
                     return true;
 
 
@@ -200,6 +202,7 @@ public class CharacterInventory : SerializedMonoBehaviour
 
 
             CharacterCombat.instance.SetWeaponInCurrentSlotAndEquip(weapon);
+            weaponText.gameObject.SetActive(false);
 
             return true;
         }

@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Melee_S_Controller : BaseEnemyMovement
 { 
     GameObject Player;
-    PlayerStats PStats;
+    CharacterCombat PStats;
     Enemy_Stats EStats;
     private bool inSight;
     private Vector3 playerLastSighting;
@@ -25,9 +25,9 @@ public class Melee_S_Controller : BaseEnemyMovement
         EStats.SightSize = 30f;
         target = CharacterCombat.instance.transform;
         agent = GetComponent<NavMeshAgent>();
-        agent.stoppingDistance = 2;
+        agent.stoppingDistance = 3;
         Player = CharacterCombat.instance.gameObject;
-        PStats = Player.GetComponent<PlayerStats>();
+        PStats = CharacterCombat.instance;
     }
 
     void Update()
@@ -100,7 +100,7 @@ public class Melee_S_Controller : BaseEnemyMovement
         }
 
         //If enemy is aware of player it will move towards the player
-        if ((inSight == true) && (PStats.Health > 0))
+        if ((inSight == true) && (!PStats.isDead()))
         {
             NavMeshPath path = new NavMeshPath();
             if (agent.CalculatePath(target.position, path))
@@ -136,8 +136,7 @@ public class Melee_S_Controller : BaseEnemyMovement
 
     void Attack()
     {
-        PStats.Health -= EStats.MeleeDamage;
-        Debug.Log("Small Enemy Dealt " + EStats.MeleeDamage + " Damage");
-        Debug.Log("Player Health is " + PStats.Health);
+        PStats.OnDamage((int) EStats.MeleeDamage);
+        
     }
 }

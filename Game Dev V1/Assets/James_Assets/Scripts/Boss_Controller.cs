@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Boss_Controller : BaseEnemyMovement
 {
     GameObject Player;
-    PlayerStats PStats;
+    CharacterCombat PStats;
     Enemy_Stats EStats;
     private bool inSight;
     private Vector3 playerLastSighting;
@@ -35,11 +35,11 @@ public class Boss_Controller : BaseEnemyMovement
         EStats.SightRadius = 60f;
         EStats.SightSize = 40f;
         EStats.Range = 30f;
-        target = GameObject.Find("Player").transform;
+        target = CharacterCombat.instance.transform;
         agent = GetComponent<NavMeshAgent>();
         agent.stoppingDistance = 2;
         Player = GameObject.Find("Player");
-        PStats = Player.GetComponent<PlayerStats>();
+        PStats = CharacterCombat.instance;
         
     }
 
@@ -133,7 +133,7 @@ public class Boss_Controller : BaseEnemyMovement
         }
 
         //If enemy is aware of player it will face the player and it will move towards player
-        if (inSight && (PStats.Health > 0))
+        if (inSight &&  !PStats.isDead())
         {
             FaceTarget();
             NavMeshPath path = new NavMeshPath();
@@ -187,7 +187,7 @@ public class Boss_Controller : BaseEnemyMovement
         //PStats.Health -= EStats.MeleeDamage;
         CharacterCombat.instance.OnDamage((int)EStats.MeleeDamage);
         Debug.Log("Boss Dealt " + EStats.MeleeDamage + " Damage");
-        Debug.Log("Player Health is " + PStats.Health);
+        
     }
 
     void GroundPound()
@@ -197,7 +197,7 @@ public class Boss_Controller : BaseEnemyMovement
         CharacterCombat.instance.OnDamage((int)EStats.GroundPoundDamage);
         //target.GetComponent<Rigidbody>().AddForce(transform.forward * 500f);
         Debug.Log("Boss used Ground Pound and Dealt " + EStats.GroundPoundDamage + " Damage");
-        Debug.Log("Player Health is " + PStats.Health);
+        
     }
 
     void AttackRange()
